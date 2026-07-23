@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!----
+high specificity-high precedense
+inline having specificity
+based on how we define - preferred internal then external
+types of selectors
+1)simple selectors
+a)element selector or tagname selector
+styles will be applied based on a element
+2)combinators
+3)pseudo class
+4)attribute
+<!-- <!-- ->  -->
+<link rel="stylesheet" href=" demo.css">
+<style>
+    h2{
+        color:green;
+    }
+    .title{
+        color:green;
+        background: yellow;
+        width:40%;
+        height:200px;
+        padding: 10px 20px 30px 40px;
+        padding: 10px 20px 30px;
+        padding :10px 20px;
+        border: 10px outset blue;
+        border-radius:20px;
+        margin:20px;
+        margin:20px 10px;
+        margin:20px 10px 30px;
+        margin:20px 10px 30px 40px;
+        display:inline-block;
+        background-image: url("https://search.brave.com/images?q=bakground+image&context=W3sic3JjIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvdGh1bWJuYWlscy8wNjAvNTMyLzY1Mi9zbWFsbC9hLXdvb2Rlbi10YWJsZS13aXRoLWEtYm90dGxlLW9mLXdhdGVyLWFuZC1hLXN1bi1zaGluaW5nLWluLXRoZS1iYWNrZ3JvdW5kLXBob3RvLmpwZyIsInRleHQiOiJBIHdvb2RlbiB0YWJsZSB3aXRoIGEgYm90dGxlIG9mIHdhdGVyIGFuZCBhIHN1biBzaGluaW5nIGluIHRoZSBiYWNrZ3JvdW5kIHBob3RvIiwicGFnZV91cmwiOiJodHRwczovL3d3dy52ZWN0ZWV6eS5jb20vZnJlZS1waG90b3MvYmFja2dyb3VuZCJ9XQ%3D%3D&sig=430720b24ff6c246a6d2222fdf458ff35d7c9aa9d42582aa3ae7d30e137a6863&nonce=d96489a20b2edbb67782d4bf95319968&source=imageCluster");
+        
+
+
+    }
+    span{
+        
+
+
+    }
+</style>
+</head>
+<body>
+    <h1 style="color:red;">inline content</h1>
+    <h2 class="title">internal content</h2>
+    <h3>external content</h3>
+</body>
+</html>
