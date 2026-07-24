@@ -1,90 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /*combinators - it is used to apply styles based on a relation
+        children selector- it is used to apply styles to the child
+        header>button>a
+        descendent selector- it is used to apply styles to all childs.
+
+        header button
+        *{border: 1px solid red}
+        boiler plate code
+        *{
+        margin :0;
+        padding:0;
+        box-sizing:border-box;
+        }
+        text properties
+        text-align :center right left;
+        text-shadow: hoffset  voffset blurradius color
+        font properties
+        1)font - family :cursive;
+        2)font-size:1.2rem
+        3)font-weight:100-900;
+        */
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(4, 4, 121);
+            text-align: center;
+            padding: 20px;
+        }
+
+        header>button {
+            color: white;
+            background: blue;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .s1 {
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
+            height: 400px;
+            background-size: 100% 100%;
+            color: white;
+            padding: 150px 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 0px 4px 0px rgb(4, 4, 2);
+
+        }
+
+        .s2 {
+            text-align: center;
+            padding: 100px;
+        }
+
+        .s3 {
+            background: whitesmoke;
+            text-align: center;
+            padding: 100px;
+        }
+
+        .card {
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 28%;
+            background: white;
+            border: 2px solid blue;
+            border-radius: 15px;
+            height: 230px;
+            box-shadow: 0px 0px 4px 0px rgb(4, 4, 2);
+        }
+        .card:hover{
+            transform:translate(0px,-20px)
+        }
+        .s4{
+            width:50%;
+            margin:auto;
+            text-align: center;
+        }
+        .box{
+            margin-left: 0px;
+            transition: all 1s;
+        }
+        .box:hover{
+            background: blue;
+            transform:translate(0px,40px);
+            transform:rotate(20deg);
+
+        }
+        .box1{
+            padding:10px;
+            background: whitesmoke;
+            margin:10px;
+            font-weight: 700;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>John Doe</h1>
-    <p>web developer | Student</p>
-    <!--internal routing
-    <h1.id ='contact'>contact</h1>
-    <a href ="#contact">Contact</a>
+    <header>
+        <button>Home</button>
+        <button>About</button>
+        <button>Services</button>
+        <button>Contact</button>
+    </header>
+    <section class="s1">
+        <h1>Learn CSS Through Projects</h1>
+        <p>This project demonstrates CSS Colors,
+            backgrounds, Flexbox, Box Model, Typpgraphy,
+            Shadows, and Responsive Design in one Modern webpage
+        </p>
+    </section>
+    <section class=" s2">
+        <h1> CSS Colors</h1>
+        <div class="parent">
+            <div class="box" style="background:red">content</div>
+            <div class="box" style="background: green;">content</div>
+            <div class="box" style="background: blue;">content</div>
+            <div class="box" style="background: violet;">content</div>
+        </div>
+    </section>
+    <section>
 
-    -->
-    <a href="#abt">about me</a>
+        <section class="s3">
+            <div class="card">
+                <h3>Card One</h3>
+                <p>Padding creates space inside the element.Border surrounds
+                    the content. Margin creates space outside the element.</p>
+            </div>
+            <div class="card">
+                <h3>Card One</h3>
+                <p>Padding creates space inside the element.Border surrounds
+                    the content. Margin creates space outside the element.</p>
+            </div>
+            <div class="card">
+                <h3>Card One</h3>
+                <p>Padding crates space inside the element.Border surrounds
+                    the content.Margin creates space outside the element.
+                </p>
+            </div>
+            
+        </section>
+        <section class="s4">
+            <div>
+                <div class = "box1">some  font content</div>
+                <div class = "box1">some  font content</div>
+                <div class = "box1">some  font content</div>
+                <div class = "box1">some  font content</div>
 
-    <a href="#ach">achivements</a>
+            </div>
 
-    <a href="#edu">education</a>
+        </section>
+        <footer style="color:white"
 
-    <a href="#projects">projects</a>
 
-    <a href="#contact">Contact</a>
-    <hr>
-    <h1 id="abt">about me</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam distinctio nemo hic voluptatem illum minus culpa velit, beatae reprehenderit necessitatibus, enim fuga a sit quo natus provident rem veritatis! Atque!
-    <hr>
-    <h1 id ="ach">Achivements</h1>
-    <hr>
-    <ul>
-        <li>completed html course</li>
-        <li>built multiple projects</li>
-        <li>practiced problem solving</li>
-        <li>improving every day</li>
-    </ul>
-    <hr>
-    <h1 id ="contact">contact</h1>
-    <a href="tel:9866174438">call us </a><br>
-    <a href="bhavanavepada76@gmail.com">mail us </a><br>
-    <a href="https://wa.me/7i45093">whatsp us </a><br>
 </body>
+
 </html>
-<h1 id ="edu">Education</h1>
-<table border =" 1" cellpadding =" 10" cell spacing = "5" width =" 100"% height=" 300">
-    <tr>
-        <th>Qualification</th>
-        <th>Institution</th>
-        <th>Year</th>
-        <th>location</th>
-    </tr>
-    <tr>
-        <td>High school</td>
-        <td>xyz</td>
-        <td>2018-2024</td>
-        <td>Newyork,usa</td>
-    </tr>
-    <hr>
-    <table>
-        <tr>
-            <td>
-                <h2 id="projects">Portfolio website</h2>
-                <p>A personal portfolio website using html</p>
-                <a href ="">view details</a>
-            </td>
-            <td>
-                <h2>Student Registration form </p>
-                    <a href="">view details</a>
-            </td>
-            <td>
-                <h2>Simple calculator</h2>
-                <p>A personal portfolio website using html</p>
-                <a href="">view details</a>
-            </td>
-    </table>
-    <hr>
-    <h1 id = "contact">Contact</h1>
-    <a href="98874478435">callus</a><br>
-    <a href = "https://wp.me/887542198">what</a>
-
-
-
-
-
-
-
-
-
-
-
